@@ -1,38 +1,70 @@
 @charset "utf-8";
 
-// Import a Google Font
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 
-// // Set your brand colors
-// $purple: #8a4d76;
-// $pink: #fa7c91;
-// $brown: #757763;
-// $beige-light: #d0d1cd;
-// $beige-lighter: #eff0eb;
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
 
-// // Update Bulma's global variables
-// $family-sans-serif: "Nunito", sans-serif;
-// $grey-dark: $brown;
-// $grey-light: $beige-light;
-// $primary: $purple;
-// $link: $pink;
-// $widescreen-enabled: false;
-// $fullhd-enabled: false;
+$primary: #ccccff;
+$primary: #ff7f50;
 
-// // Update some of Bulma's component variables
-// $body-background-color: $beige-lighter;
-// $control-border-width: 2px;
-// $input-border-color: transparent;
-// $input-shadow: none;
+$link: $pink;
 
-// Import only what you need from Bulma
+// $body-background-color: $beige-light;
+
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
 @import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
 
 @import "../node_modules/bulma/sass/layout/section.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
 @import "../node_modules/bulma/sass/elements/button.sass";
 @import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/elements/image.sass";
 
-// custom components styling
+.virtual-slider {
+  outline: 0;
+  border: 0;
+  transition: box-shadow 0.2s ease-in-out;
+  width: 100%;
+  cursor: pointer;
+  // mozilla
+  &::-moz-range-progress {
+    background-color: $primary;
+  }
+  &::-moz-range-track {
+    background-color: $primary;
+  }
+  // Internet Explorer
+  &::-ms-fill-lower {
+    background-color: $primary;
+  }
+  &::-ms-fill-upper {
+    background-color: $primary;
+  }
+  // chrome
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    & {
+      -webkit-appearance: none;
+    }
+    &::-webkit-slider-runnable-track {
+      background: $primary;
+      height: 2px;
+      border-radius: 4px;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 15px;
+      width: 15px;
+      border: thin solid $brown;
+      background: #eff0eb;
+      margin-top: -6.8px;
+      border-radius: 50%;
+    }
+  }
+}

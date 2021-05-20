@@ -8,35 +8,108 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1 class="title">Bulma</h1>
-
-    <p class="subtitle">
-      Modern CSS framework based on
-      <a
-        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox"
-        >Flexbox</a
-      >
-    </p>
-
-    <div class="field">
-      <div class="control">
-        <input class="input" type="text" placeholder="Input" />
+    <div class="container">
+      <h1 class="title">Testing Bulma</h1>
+      <div class="columns is-centered">
+        <div class="column is-one-quarter">Input Text</div>
+        <div class="column">
+          <div class="control">
+            <input
+              class="input is-primary"
+              type="text"
+              placeholder="Enter text"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="field">
-      <p class="control">
-        <span class="select">
-          <select>
-            <option>Select dropdown</option>
-          </select>
-        </span>
-      </p>
-    </div>
-
-    <div class="buttons">
-      <a class="button is-primary">Primary</a>
-      <a class="button is-link">Link</a>
+      <div class="columns is-centered">
+        <div class="column is-one-quarter">Checkbox</div>
+        <div class="column">
+          <div class="control">
+            <label class="checkbox">
+              <input type="checkbox" />
+              Male
+            </label>
+          </div>
+        </div>
+        <div class="column">
+          <div class="control">
+            <label class="checkbox">
+              <input type="checkbox" />
+              Female
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-one-quarter">Radio</div>
+        <div class="column">
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="answer" />
+              Yes
+            </label>
+          </div>
+        </div>
+        <div class="column">
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="answer" />
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-one-quarter">Range Slider</div>
+        <div class="column">
+          <input type="range" class="virtual-slider is-fullwidth" />
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-one-quarter">Dropdown</div>
+        <div class="column">
+          <div class="select is-primary is-fullwidth">
+            <select>
+              <option>India</option>
+              <option>Japan</option>
+              <option>Australia</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-one-quarter">Button</div>
+        <div class="column">
+          <button class="button is-primary">Primary</button>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-one-quarter">Image</div>
+        <div class="column">
+          <figure class="image is-128x128">
+            <img
+              src="https://i.ibb.co/k5MhXst/4354122.jpg"
+              class="is-rounded"
+            />
+          </figure>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-one-quarter">Text</div>
+        <div class="column">
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              aliquam at deserunt cum <a href="#">architecto quos</a> fuga dicta
+              est impedit quia, sunt tempora odit in voluptas animi temporibus
+              laboriosam officia facere necessitatibus dolore non quae
+              repudiandae facilis quam. Saepe animi tenetur, provident ea
+              doloribus distinctio adipisci praesentium commodi sint amet fugit!
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
