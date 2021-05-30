@@ -1,0 +1,14 @@
+.v-button {
+  border: none;
+  color: $button-text-color;
+  background-color: $primary;
+  text-align: center;
+  font-size: 1.05rem;
+  border-radius: 1em;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+}
+
+.v-button:hover {
+  background-color: $button-hover-color;
+}

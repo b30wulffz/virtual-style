@@ -1,8 +1,7 @@
-.virtual-slider {
+.v-slider {
   outline: 0;
   border: 0;
   transition: box-shadow 0.2s ease-in-out;
-  width: 100%;
   cursor: pointer;
   // mozilla
   &::-moz-range-progress {
@@ -38,4 +37,9 @@
       border-radius: 50%;
     }
   }
+}
+
+.v-slider-full {
+  @extend .v-slider;
+  width: 100%;
 }

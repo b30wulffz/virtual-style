@@ -1,0 +1,9 @@
+.v-tabs {
+  @extend .tabs;
+  @extend .is-boxed;
+}
+
+.v-tabs-centered {
+  @extend .v-tabs;
+  @extend .is-centered;
+}

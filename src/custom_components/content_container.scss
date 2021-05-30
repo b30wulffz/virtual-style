@@ -1,0 +1,61 @@
+.v-content-container {
+  border: 0.2rem solid $secondary;
+  border-radius: 1rem;
+}
+
+// instruction container
+.v-instruction-container {
+  @extend .v-content-container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.v-instruction-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.v-instruction-text {
+  font-size: 1.1rem;
+  padding: 0 1.5em;
+}
+
+// datalist container
+.v-datalist-container {
+  @extend .v-instruction-container;
+  justify-content: flex-start;
+  background: $datalist-container-bg;
+}
+
+.v-datalist-title {
+  border-bottom: thin solid black;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 0.2em;
+}
+
+.v-datalist-row {
+  padding: 0.8rem 0.4rem;
+  width: 100%;
+
+  @at-root a#{&} {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      background-color: rgb(77, 73, 73);
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+// canvas container
+.v-canvas-container {
+  border: 0.2rem solid black;
+  width: 100%;
+}
