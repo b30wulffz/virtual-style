@@ -12,3 +12,8 @@
 .v-button:hover {
   background-color: $button-hover-color;
 }
+
+.v-button:disabled {
+  background-color: $button-hover-color;
+  cursor: not-allowed;
+}
