@@ -1,0 +1,25 @@
+.v-chip {
+  @extend .v-detail-block;
+  padding: 1em;
+  min-width: 15rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+}
+
+.v-chip:hover {
+  background: #48b8d0;
+  color: #fff;
+}
+
+.v-chip.active {
+  background: #48b8d0;
+  color: #fff;
+}
+
+@media only screen and (max-width: $md) {
+  .v-chip {
+    width: 100%;
+  }
+}

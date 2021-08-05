@@ -1,0 +1,104 @@
+.v-icon-panel {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.v-icon-panel-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  cursor: pointer;
+}
+
+.v-icon-panel-trigger {
+  @extend .v-icon-panel-item;
+  margin: 0;
+}
+
+.v-icon-panel-icon {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  object-fit: contain;
+}
+
+.v-icon-panel-title {
+  text-align: center;
+  width: 4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+
+.v-icon-panel-body {
+  position: absolute;
+  left: 5rem;
+  width: 0;
+  overflow: hidden;
+  transition: 0.4s ease width;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.v-icon-panel.v-show .v-icon-panel-body {
+  width: 100%;
+  overflow: auto;
+  animation: hide-scroll 0.4s backwards;
+  @keyframes hide-scroll {
+    from,
+    to {
+      overflow: hidden;
+    }
+  }
+}
+
+.v-icon-panel.v-show .v-icon-panel-trigger .v-icon-panel-icon {
+  background: transparent
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+  border: thin solid rgb(0, 204, 255);
+  padding: 4rem 4rem 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+  .v-responsive.v-icon-panel {
+    flex-direction: column;
+    width: 100%;
+    border: thin solid black;
+    padding: 10px;
+    background: $datalist-container-bg;
+  }
+
+  .v-responsive .v-icon-panel-trigger {
+    padding-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .v-responsive .v-icon-panel-trigger .v-icon-panel-icon {
+    display: none;
+  }
+  .v-responsive .v-icon-panel-trigger .v-icon-panel-title {
+    text-align: center;
+    cursor: auto;
+    width: 100%;
+  }
+
+  .v-responsive .v-icon-panel-body {
+    position: relative;
+    top: 0rem;
+    left: 0;
+    display: flex;
+    overflow: unset;
+    margin-left: 0;
+    width: 100% !important;
+    flex-wrap: wrap;
+  }
+}
