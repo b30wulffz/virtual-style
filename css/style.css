@@ -7690,7 +7690,7 @@ div.icon-text {
 @media only screen and (max-width: 768px) {
   .left-on-mobile {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: flex-start !important;
   }
 }
 
