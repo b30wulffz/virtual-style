@@ -1,0 +1,23 @@
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// misc
+@media only screen and (max-width: $md) {
+  .left-on-mobile {
+    width: 100%;
+    justify-content: flex-start !important;
+  }
+}
+
+.v-margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.v-vertical,
+.v-flex-column {
+  display: flex;
+  flex-direction: column;
+}

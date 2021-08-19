@@ -1,0 +1,9 @@
+.v-select {
+  @extend .select;
+  @extend .is-rounded;
+}
+
+.v-select-full {
+  @extend .v-select;
+  @extend .is-fullwidth;
+}
