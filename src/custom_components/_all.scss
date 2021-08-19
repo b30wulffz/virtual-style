@@ -1,11 +1,11 @@
-@import "./slider2.scss";
-@import "./table.scss";
-@import "./positioning.scss";
 @import "./button.scss";
-@import "./select.scss";
-@import "./tabs.scss";
-@import "./content_container.scss";
-@import "./font.scss";
 @import "./checkbox_radio.scss";
+@import "./content_container.scss";
+@import "./chip.scss"; // dependencies: [content_container]
+@import "./font.scss";
 @import "./icon_panel.scss";
-@import "./chip.scss";
+@import "./positioning.scss";
+@import "./select.scss";
+@import "./slider.scss";
+@import "./table.scss";
+@import "./tabs.scss";
