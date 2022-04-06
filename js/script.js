@@ -26,3 +26,15 @@ document.querySelectorAll(".v-icon-panel").forEach((iconPanel) => {
       }
     });
 });
+
+document.querySelectorAll(".v-collapsible").forEach((item) =>
+  item.addEventListener("click", () => {
+    item.classList.toggle("v-collapsible-active");
+    const content = item.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  })
+);
